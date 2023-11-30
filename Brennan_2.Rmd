@@ -3,14 +3,14 @@ title: "Brennan 2.2"
 author: "Ralph Bloch"
 date: "November 26, 2023"
 output:
-  html_document:
-    toc: yes
-    toc_depth: '2'
-    df_print: paged
   html_notebook:
     toc: yes
     toc_depth: 2
     toc_float: yes
+  html_document:
+    toc: yes
+    toc_depth: '2'
+    df_print: paged
 ---
 
 ## Introduction {#sec-introduction}
@@ -96,6 +96,7 @@ Phi <- sigma2p/(sigma2p + (sigma2pi + sigma2i)/ni)
 
 ## Results for Brennan's Table 2.2 data
 
+![Side by side results from R and from "Generalizability Theory](ResultsBrennan.png)
 <br>
 
 In other words, the few R instructions give us the correct answers.
