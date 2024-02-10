@@ -25,7 +25,7 @@ In this R Notebook I would like to demonstrate how to perform the ANOVA calculat
 
 \pagebreak
 
-|  ![Tables 2.2 and 2.3 from Brennan R.L., Generalizability Theory](Table_2_2.png)
+|  ![Tables 2.2 and 2.3 from Brennan R.L., Generalizability Theory](https://github.com/Papa-26/Brennan/blob/main/Table_2_2.png)
 
 Maybe, I should quickly explain the nomenclature used in the **R** calculations, since 'Rmd', the code used for the calculations, uses a slightly different set of characters. But it is actually quite simple to understand the symbolic equivalences from these examples:
 
@@ -96,7 +96,7 @@ Phi <- sigma2p/(sigma2p + (sigma2pi + sigma2i)/ni)
 
 ## Results for Brennan's Table 2.2 data
 
-![Side by side results from R and from "Generalizability Theory](ResultsBrennan.png)
+![Side by side results from R and from "Generalizability Theory](https://github.com/Papa-26/Brennan/blob/main/ResultsBrennan.png)
 <br>
 
 In other words, the few R instructions give us the correct answers.
@@ -109,16 +109,16 @@ In other words, the few R instructions give us the correct answers.
 
 But there is more to it. We simply replace Brennan's scores with those from the G-String website MCQ scores by commenting out 'scores \<- read.csv("scores.csv", header=FALSE)', and removing the hash mark from 'scores \<- read.csv("scoresMCQgh.csv", header=FALSE)'. It takes less than a second for the new results:
 
-![R Analysis of website MCQ data](DataMCQgh.png)
+![R Analysis of website MCQ data](https://github.com/Papa-26/Brennan/blob/main/DataMCQgh.png)
 
 <br>
 
 When we compare this with the results from G-String:
 
-|    ![ANOVA](ANOVA.png)
+|    ![ANOVA](https://github.com/Papa-26/Brennan/blob/main/ANOVA.png)
 
 <br> we see that sum scores and variance components are spot on! but let's now look at the Generalizability Coefficients:
 
-|    ![Generalizability Coefficients](GC.png)
+|    ![Generalizability Coefficients](https://github.com/Papa-26/Brennan/blob/main/GC.png)
 
 <br> They too match the results from R. However, remember that this Multiple Choice Exam represents the simple (p x i) design, where the ANOVA was straight forward. When analyzing more complex designs, the calculations become much more complicated. G-String employs Brennan's urGENOVA subroutine that uses elaborate iterative approaches, we can not easily replicate in simple R algorithms.
