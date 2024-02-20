@@ -2941,110 +2941,57 @@ examples:</p>
 <h2>Set Table 2.2</h2>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYGBgclxuc2NvcmVzIDwtIHJlYWQuY3N2KFxcc2NvcmVzLmNzdlxcLCBoZWFkZXI9RkFMU0UpXG4jIHNjb3JlcyA8LSByZWFkLmNzdihcXFNjb3Jlc01DUWdoLmNzdlxcLCBoZWFkZXI9RkFMU0UpXG5gYGBcbmBgYCJ9 -->
-<pre class="r"><code>```r
-scores &lt;- read.csv(\scores.csv\, header=FALSE)
-# scores &lt;- read.csv(\ScoresMCQgh.csv\, header=FALSE)</code></pre>
-<pre><code>
-&lt;!-- rnb-source-end --&gt;
-
-&lt;!-- rnb-chunk-end --&gt;
-
-
-&lt;!-- rnb-text-begin --&gt;
-
-
-## Calculate row, col, and gross mean
-
-
-&lt;!-- rnb-text-end --&gt;
-
-
-&lt;!-- rnb-chunk-begin --&gt;
-
-
-&lt;!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYGBgclxuWGliYXIgPC0gY29sTWVhbnMoc2NvcmVzKVxuWHBiYXIgPC0gcm93TWVhbnMoc2NvcmVzKVxuWGJhciA8LSBtZWFuKFhwYmFyKVxuYGBgXG5gYGAifQ== --&gt;
-
-```r
-```r
-Xibar &lt;- colMeans(scores)
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuc2NvcmVzIDwtIHJlYWQuY3N2KFwic2NvcmVzLmNzdlwiLCBoZWFkZXI9RkFMU0UpXG4jIHNjb3JlcyA8LSByZWFkLmNzdihcIlNjb3Jlc01DUWdoLmNzdlwiLCBoZWFkZXI9RkFMU0UpXG5gYGAifQ== -->
+<pre class="r"><code>scores &lt;- read.csv(&quot;scores.csv&quot;, header=FALSE)
+# scores &lt;- read.csv(&quot;ScoresMCQgh.csv&quot;, header=FALSE)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+</div>
+<div id="calculate-row-col-and-gross-mean" class="section level2">
+<h2>Calculate row, col, and gross mean</h2>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuWGliYXIgPC0gY29sTWVhbnMoc2NvcmVzKVxuWHBiYXIgPC0gcm93TWVhbnMoc2NvcmVzKVxuWGJhciA8LSBtZWFuKFhwYmFyKVxuYGBgIn0= -->
+<pre class="r"><code>Xibar &lt;- colMeans(scores)
 Xpbar &lt;- rowMeans(scores)
 Xbar &lt;- mean(Xpbar)</code></pre>
-<pre><code>
-&lt;!-- rnb-source-end --&gt;
-
-&lt;!-- rnb-chunk-end --&gt;
-
-
-&lt;!-- rnb-text-begin --&gt;
-
-
-## Calculate sample sizes (n) and degrees of freedom (df)
-
-
-&lt;!-- rnb-text-end --&gt;
-
-
-&lt;!-- rnb-chunk-begin --&gt;
-
-
-&lt;!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYGBgclxubnAgPC0gbnJvdyhzY29yZXMpXG5uaSA8LSBuY29sKHNjb3JlcylcbmRmcCA8LSBucCAtMVxuZGZpIDwtIG5pIC0xXG5kZnBpIDwtIGRmcCAqIGRmaVxuYGBgXG5gYGAifQ== --&gt;
-
-```r
-```r
-np &lt;- nrow(scores)
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+</div>
+<div id="calculate-sample-sizes-n-and-degrees-of-freedom-df" class="section level2">
+<h2>Calculate sample sizes (n) and degrees of freedom (df)</h2>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubnAgPC0gbnJvdyhzY29yZXMpXG5uaSA8LSBuY29sKHNjb3JlcylcbmRmcCA8LSBucCAtMVxuZGZpIDwtIG5pIC0xXG5kZnBpIDwtIGRmcCAqIGRmaVxuYGBgIn0= -->
+<pre class="r"><code>np &lt;- nrow(scores)
 ni &lt;- ncol(scores)
 dfp &lt;- np -1
 dfi &lt;- ni -1
 dfpi &lt;- dfp * dfi</code></pre>
-<pre><code>
-&lt;!-- rnb-source-end --&gt;
-
-&lt;!-- rnb-chunk-end --&gt;
-
-
-&lt;!-- rnb-text-begin --&gt;
-
-
-## Calculate Sum Squares
-
-
-&lt;!-- rnb-text-end --&gt;
-
-
-&lt;!-- rnb-chunk-begin --&gt;
-
-
-&lt;!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYGBgclxuU3VtWHBiYXIyIDwtIHN1bShYcGJhcl4yKVxuU3VtWGliYXIyIDwtIHN1bShYaWJhcl4yKVxuU3VtWHBpYmFyMiA8LSBzdW0oc2NvcmVzXjIpXG5gYGBcbmBgYCJ9 --&gt;
-
-```r
-```r
-SumXpbar2 &lt;- sum(Xpbar^2)
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+</div>
+<div id="calculate-sum-squares" class="section level2">
+<h2>Calculate Sum Squares</h2>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuU3VtWHBiYXIyIDwtIHN1bShYcGJhcl4yKVxuU3VtWGliYXIyIDwtIHN1bShYaWJhcl4yKVxuU3VtWHBpYmFyMiA8LSBzdW0oc2NvcmVzXjIpXG5gYGAifQ== -->
+<pre class="r"><code>SumXpbar2 &lt;- sum(Xpbar^2)
 SumXibar2 &lt;- sum(Xibar^2)
 SumXpibar2 &lt;- sum(scores^2)</code></pre>
-<pre><code>
-&lt;!-- rnb-source-end --&gt;
-
-&lt;!-- rnb-chunk-end --&gt;
-
-
-&lt;!-- rnb-text-begin --&gt;
-
-
-## ANOVA
-
-
-&lt;!-- rnb-text-end --&gt;
-
-
-&lt;!-- rnb-chunk-begin --&gt;
-
-
-&lt;!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYGBgclxuU1MgPC0gbnAgKiBuaSAqIFhiYXIgXiAyXG5TU3AgPC0gbmkgKiBTdW1YcGJhcjIgLSBTU1xuU1NpIDwtIG5wICogU3VtWGliYXIyIC0gU1NcblNTcGkgPC0gU3VtWHBpYmFyMiAtIG5pICogU3VtWHBiYXIyIC0gbnAgKiBTdW1YaWJhcjIgKyBTU1xuTVNwIDwtIFNTcCAvIGRmcFxuTVNpIDwtIFNTaSAvIGRmaVxuTVNwaSA8LSBTU3BpIC8gZGZwaVxuc2lnbWEycCA8LSAoTVNwIC0gTVNwaSkvIG5pXG5zaWdtYTJpIDwtIChNU2kgLSBNU3BpKS8gbnBcbnNpZ21hMnBpIDwtIE1TcGlcbmBgYFxuYGBgIn0= --&gt;
-
-```r
-```r
-SS &lt;- np * ni * Xbar ^ 2
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+</div>
+<div id="anova" class="section level2">
+<h2>ANOVA</h2>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuU1MgPC0gbnAgKiBuaSAqIFhiYXIgXiAyXG5TU3AgPC0gbmkgKiBTdW1YcGJhcjIgLSBTU1xuU1NpIDwtIG5wICogU3VtWGliYXIyIC0gU1NcblNTcGkgPC0gU3VtWHBpYmFyMiAtIG5pICogU3VtWHBiYXIyIC0gbnAgKiBTdW1YaWJhcjIgKyBTU1xuTVNwIDwtIFNTcCAvIGRmcFxuTVNpIDwtIFNTaSAvIGRmaVxuTVNwaSA8LSBTU3BpIC8gZGZwaVxuc2lnbWEycCA8LSAoTVNwIC0gTVNwaSkvIG5pXG5zaWdtYTJpIDwtIChNU2kgLSBNU3BpKS8gbnBcbnNpZ21hMnBpIDwtIE1TcGlcbmBgYCJ9 -->
+<pre class="r"><code>SS &lt;- np * ni * Xbar ^ 2
 SSp &lt;- ni * SumXpbar2 - SS
 SSi &lt;- np * SumXibar2 - SS
 SSpi &lt;- SumXpibar2 - ni * SumXpbar2 - np * SumXibar2 + SS
@@ -3054,31 +3001,17 @@ MSpi &lt;- SSpi / dfpi
 sigma2p &lt;- (MSp - MSpi)/ ni
 sigma2i &lt;- (MSi - MSpi)/ np
 sigma2pi &lt;- MSpi</code></pre>
-<pre><code>
-&lt;!-- rnb-source-end --&gt;
-
-&lt;!-- rnb-chunk-end --&gt;
-
-
-&lt;!-- rnb-text-begin --&gt;
-
-
-## Generalizability Coefficients
-
-
-&lt;!-- rnb-text-end --&gt;
-
-
-&lt;!-- rnb-chunk-begin --&gt;
-
-
-&lt;!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYGBgclxuRXJobzIgPC0gc2lnbWEycC8oc2lnbWEycCArIHNpZ21hMnBpL25pKVxuUGhpIDwtIHNpZ21hMnAvKHNpZ21hMnAgKyAoc2lnbWEycGkgKyBzaWdtYTJpKS9uaSlcbmBgYFxuYGBgIn0= --&gt;
-
-```r
-```r
-Erho2 &lt;- sigma2p/(sigma2p + sigma2pi/ni)
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+</div>
+<div id="generalizability-coefficients" class="section level2">
+<h2>Generalizability Coefficients</h2>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuRXJobzIgPC0gc2lnbWEycC8oc2lnbWEycCArIHNpZ21hMnBpL25pKVxuUGhpIDwtIHNpZ21hMnAvKHNpZ21hMnAgKyAoc2lnbWEycGkgKyBzaWdtYTJpKS9uaSlcbmBgYCJ9 -->
+<pre class="r"><code>Erho2 &lt;- sigma2p/(sigma2p + sigma2pi/ni)
 Phi &lt;- sigma2p/(sigma2p + (sigma2pi + sigma2i)/ni)</code></pre>
-<p>```</p>
 <!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
