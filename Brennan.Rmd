@@ -32,7 +32,7 @@ If you want to actually download, and play around with the R script, you need to
 
 \pagebreak
 
-Maybe, I should quickly explain the nomenclature used in the **R** calculations, since 'Rmd', the code used for the calculations, uses a slightly different set of characters. But it is actually quite simple to understand the symbolic equivalences from these examples:
+<br/> ![Tables 2.2 and 2.3 from "Generalizability Theory"](Table_2_2.png) <br/><br/> Maybe, I should quickly explain the nomenclature used in the **R** calculations, since 'Rmd', the code used for the calculations, uses a slightly different set of characters. But it is actually quite simple to understand the symbolic equivalences from these examples:
 
 > dfi -\> $df_{i}$
 
