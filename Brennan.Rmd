@@ -126,3 +126,5 @@ When we compare this with the results from G-String:
 |    ![Generalizability Coefficients](GC.png)
 
 <br> They too match the results from R. However, remember that this Multiple Choice Exam represents the simple (p x i) design, where the ANOVA was straight forward. When analyzing more complex designs, the calculations become much more complicated. G-String employs Brennan's urGENOVA subroutine that uses elaborate iterative approaches, we can not easily replicate in simple R algorithms.
+
+<br>More elaborate R algorithms are available in an [R-Package](https://cran.r-project.org/web/packages/gtheory/gtheory.pdf) by Christopher T. Moore.
