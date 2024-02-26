@@ -4,8 +4,6 @@ This is a little project performing Generalizability Analysis for (p x i) design
 
 This repository contains all the files necessary, so anybody can repeat the experiment.
 
--   Brennan_2.pdf shows the procedure.
-
 -   Brennan_2.Rmd contains the compete markdown notebook.
 
 -   Brennan_2.html can be opened in a browser
