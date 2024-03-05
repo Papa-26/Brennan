@@ -28,7 +28,7 @@ Generalizability Analysis (GA) is a statistical method for analyzing the validit
 In this R Notebook I would like to demonstrate how to perform the ANOVA calculations required for GA transparently and efficiently using **R**. Here is a simple (p x i) design from "Generalizability Theory" by R. L. Brennan: Tables 2.2 and 2.3 on page 28.
 
 **Important !**\
-If you want to actually download, and play around with the R script, you need to also download the files 'Data_Brennan_2.2.png', 'DataMCQgh.png', 'DataMCQ Scores.png', 'ResultsBrennan.png', scores.csv, ScoresMCQgh.csv and 'Table_2_2.png' from <https://github.com/Papa-26/Brennan>, and load them into the corresponding R working directory.
+If you want to actually download, and play around with the R script, you need to also download the files 'DataMCQgh.png' 'ResultsBrennan.png', scores.csv, ScoresMCQgh.csv and 'Table_2_2.png' from <https://github.com/Papa-26/Brennan>, and load them into the corresponding R working directory.
 
 \pagebreak
 
